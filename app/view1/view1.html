@@ -1,1 +1,116 @@
-<p>This is the partial for view 1.</p>
+<nav class="navbar navbar-default" ng-controller="NavBarController">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login &#47; Register <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="">Action</a></li>
+            <li><a href="">Another action</a></li>
+            <li><a href="">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="" ng-click="logout()">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ng-controller="DashBoardController">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-xl-12 col-md-offset-1 col-lg-offset-1 col-sm-offset-1">        
+       <div class="panel panel-primary">
+         <div class="panel-heading">Daily archive</div>
+          <div class="panel-body">
+                
+             
+            <form class="form-horizontal">
+              <fieldset>
+                <legend>Create New Event</legend>
+                <div class="form-group">
+                  <label for="select" class="col-xs-4 col-sm-2 col-lg-2 control-label">Category</label>
+                  <div class="col-xs-6 col-sm-4 col-lg-4 bottom-pad">
+                    <select class="form-control" id="select" ng-model="formData.category">
+                      <option>Bill</option>
+                      <option>Money Transfer</option>
+                      <option>Raw</option>
+                      <option>Picture</option>
+                      <option>Audio</option>
+                      <option>Video</option>
+                      <option>Office</option>
+                    </select>
+                  </div>
+                  <label for="title" class="col-xs-4 col-sm-2 col-md-2 col-lg-2 control-label">Title</label>
+                  <div class="col-lg-4 col-md-4 col-xs-6 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Title" ng-model="formData.title">
+                  </div>
+                </div>  
+                      
+                <div class="form-group">
+                  <label for="number" class="col-xs-4 col-sm-2 col-md-2 col-lg-2 control-label">Number</label>
+                  <div class="col-lg-4 col-md-4 col-xs-6 col-sm-4 bottom-pad">
+                    <input type="number" class="form-control" placeholder="Numeric" ng-model="formData.number">
+                  </div>
+                  <label for="time" class="col-xs-4 col-sm-2 col-md-2 col-lg-2 control-label">Time</label>
+                  <div class="col-lg-4 col-md-4 col-xs-6 col-sm-4">
+                    <input type="text" class="form-control" placeholder="Time" ng-model="formData.time">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="price" class="col-xs-4 col-sm-2 col-md-2 col-lg-2 control-label">Price</label>
+                  <div class="col-lg-4 col-md-4 col-xs-6 col-sm-4">
+                    <input type="number" class="form-control" placeholder="Money" ng-model="formData.price">
+                  </div>  
+                </div>  
+                <div class="form-group">
+                    <label for="textArea" class="col-lg-2 control-label">Description</label>
+                  <div class="col-lg-10">
+                    <textarea class="form-control" rows="5" id="textArea" placeholder="Enter Description" ng-model="formData.description"></textarea>
+                    <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                  </div>     
+                </div>  
+
+                <div class="form-group">
+                    <div class="col-lg-4 col-md-4 col-xs-10 col-sm-6 text-left bottom-pad">
+                        <input type="file" value="Upload file" name="file" />    
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-xs-10 col-sm-6 text-right">
+                    <button type="reset" class="btn btn-sm btn-default" ng-click="clear()">Clear</button>
+                    <button type="submit" class="btn btn-sm btn-primary" ng-click="submit()">Submit</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  
+                </div>
+              </fieldset>
+            </form>
+              
+              
+          </div>
+        </div>
+     </div>
+</div>
+<toaster-container></toaster-container>

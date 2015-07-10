@@ -1,0 +1,39 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="margin-top: 25px;">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-xl-12 col-md-offset-1 col-lg-offset-1 col-sm-offset-1">        
+       <div class="panel panel-primary">
+         
+          <div class="panel-body">
+                
+             
+            <form class="form-horizontal" ng-submit="login()">
+              <fieldset>
+                <legend>SignIn</legend>
+                      
+                <div class="form-group">
+                  <label for="username" class="col-xs-22 col-sm-4 col-md-2 col-lg-2 control-label">Email: </label>
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 bottom-pad">
+                    <input type="email" class="form-control" id="username" placeholder="User name" ng-model="loginData.username">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="password" class="col-xs-12 col-sm-4 col-md-2 col-lg-2 control-label">Password: </label>
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="loginData.password">
+                  </div>  
+                </div>
+                 <div class="form-group">
+                  <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 text-right">
+                    <a href="#/signup" class="btn">New user! Register here</a>
+                    <button type="reset" class="btn btn-md btn-default" ng-click="clear()">Clear</button>
+                    <button type="submit" class="btn btn-md btn-primary">Sign In</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+              
+              
+          </div>
+        </div>
+     </div>
+</div>
+<toaster-container></toaster-container>

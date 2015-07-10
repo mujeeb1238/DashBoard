@@ -28,3 +28,25 @@
   content: "";
   padding: 0;
 }
+
+@media (max-width: 767px){    
+    .bottom-pad{
+        padding-bottom: 15px;
+    }   
+}
+
+.errorDiv{
+  background-color: rgba(232, 25, 25, 0.55);
+  color: rgb(242, 242, 242);
+  font-family: monospace;
+  font-size: 18px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.29);
+  border-width: 1px;
+  border-color: rgba(3, 3, 3, 0.12);
+  border-style: inset;
+  padding: 5px;
+  padding-left: 50px;
+}
+
+
+.fa-fw {width: 2em;}
