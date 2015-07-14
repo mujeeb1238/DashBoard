@@ -42,7 +42,7 @@ myApp.factory('authInterceptor', ['$rootScope', '$q', '$window', '$location', 'A
                 }
                 
             }
-            config.headers['Auth-Token'] = AuthService.getToken();
+            config.headers['Authorization'] = 'Basic '+AuthService.getToken();
             config.data = config.data || {};
             config.data.id = AuthService.getUID();
         }

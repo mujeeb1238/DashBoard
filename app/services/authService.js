@@ -34,7 +34,8 @@ myApp.factory('AuthService',['$sessionStorage',function($sessionStorage){
             return $sessionStorage;
         },
 		getLoggedInUserName: function(){
-			return this.getLastName()+', '+this.getFirstName();
+			//return this.getLastName()+', '+this.getFirstName();
+			return this.getFirstName();
 		}
 		
     }

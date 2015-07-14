@@ -11,14 +11,14 @@ myApp.controller('LoginController',['$scope','$http','toaster','$location','Auth
         $location.path('/dashboard');
     
     $scope.login = function(){
-        var url = 'https://xray-rhino.codio.io:9500/login';
+        var url = 'http://ec2-52-27-49-156.us-west-2.compute.amazonaws.com:8080/klonify/api/v1/authentication?username='+$scope.loginData.username+'&password='+$scope.loginData.password;
         //console.log($scope.loginData);
-        var promise = $http.post(url,$scope.loginData);
+        var promise = $http.post(url,{});
         promise.then(function(a){
-            authService.setToken(a.data.token);
-            authService.setUID(a.data.id);
-			authService.setFirstName(a.data.firstName);
-			authService.setLastName(a.data.lastName);
+            authService.setToken(a.data.base64EncodedAuthenticationKey);
+            authService.setUID(a.data.userId);
+			authService.setFirstName(a.data.username);
+			authService.setLastName("");//a.data.lastName
 			$rootScope.loggedInUser = authService.getLoggedInUserName();
             $location.path('/dashboard');
             toaster.pop('success', "Success", a.data.message);
